@@ -1,0 +1,3 @@
+Drink and hasStrength some AlcoholFree//bez alkoholowe
+Drink and (hasTemp some Cold or hasTemp some Chilly  ) and hasDifficulty some Easy//na lato
+Drink and (hasAlcohol some Gin or hasAlcohol some DryVermouth or hasAlcohol some Fernet-Branca) and ( hasAlcohol min  2 ) and hasNonAlcoholic some LimeJuice//coś tam robi

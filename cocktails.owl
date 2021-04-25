@@ -321,16 +321,8 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
 :CranberrySparkler rdf:type owl:Class ;
                    rdfs:subClassOf :NamedDrink ,
                                    [ rdf:type owl:Restriction ;
-                                     owl:onProperty :hasDifficulty ;
-                                     owl:someValuesFrom :Easy
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty :hasGarnish ;
                                      owl:someValuesFrom :OrangePeel
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :hasGlass ;
-                                     owl:someValuesFrom :HighballGlass
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :hasNonAlcoholic ;
@@ -347,14 +339,6 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :hasOtherIngredient ;
                                      owl:someValuesFrom :Ice
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :hasStrength ;
-                                     owl:someValuesFrom :AlcoholFree
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :hasTemp ;
-                                     owl:someValuesFrom :Cold
                                    ] .
 
 
@@ -1695,6 +1679,28 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
 #################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Campari
+                :Beer
+                :BlackberryLiqueur
+                :Campari
+                :Cider
+                :Cointreau
+                :Fernet-Branca
+                :Gin
+                :GrandMariner
+                :Jagermeister
+                :LillietBlanc
+                :Rum
+                :Tequila
+                :Vermouth
+                :Vodka
+                :Whiskey
+                :Wine
+              )
+] .
+
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :IrishCoffee
