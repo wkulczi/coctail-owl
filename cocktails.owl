@@ -211,17 +211,429 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
 #    Classes
 #################################################################
 
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#AgaveSyrup
+###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#BicycletteCocktail
+:BicycletteCocktail rdf:type owl:Class ;
+                    rdfs:subClassOf :NamedDrink ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasAlcohol ;
+                                      owl:someValuesFrom :Campari
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasAlcohol ;
+                                      owl:someValuesFrom :DryWhiteWine
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasDifficulty ;
+                                      owl:someValuesFrom :Easy
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasFruit ;
+                                      owl:someValuesFrom :LimeSlices
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasGlass ;
+                                      owl:someValuesFrom :WineGlass
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasOtherIngredient ;
+                                      owl:someValuesFrom :Ice
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasStrength ;
+                                      owl:someValuesFrom :Medium
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasTemp ;
+                                      owl:someValuesFrom :Chilly
+                                    ] .
+
+
+###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#BrownSugar
+:BrownSugar rdf:type owl:Class ;
+            rdfs:subClassOf :Other ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasState ;
+                              owl:someValuesFrom :Solid
+                            ] .
+
+
+###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#Campari
+:Campari rdf:type owl:Class ;
+         rdfs:subClassOf :Alcohol .
+
+
+###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#CiderMojito
+:CiderMojito rdf:type owl:Class ;
+             rdfs:subClassOf :NamedDrink ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasAlcohol ;
+                               owl:someValuesFrom :Cider
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasAlcohol ;
+                               owl:someValuesFrom :WhiteRum
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasDifficulty ;
+                               owl:someValuesFrom :Easy
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasFruit ;
+                               owl:someValuesFrom :LimeQuarters
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasGlass ;
+                               owl:someValuesFrom :HighballGlass
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasNonAlcoholic ;
+                               owl:someValuesFrom :SimpleSyrup
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasOtherIngredient ;
+                               owl:someValuesFrom :Ice
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasOtherIngredient ;
+                               owl:someValuesFrom :MintLeaves
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasStrength ;
+                               owl:someValuesFrom :Medium
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasTemp ;
+                               owl:someValuesFrom :Cold
+                             ] .
+
+
+###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#Coffee
+:Coffee rdf:type owl:Class ;
+        rdfs:subClassOf :NonAlcoholic .
+
+
+###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#CranberryJuice
+:CranberryJuice rdf:type owl:Class ;
+                rdfs:subClassOf :Juice .
+
+
+###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#CranberrySparkler
+:CranberrySparkler rdf:type owl:Class ;
+                   rdfs:subClassOf :NamedDrink ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasDifficulty ;
+                                     owl:someValuesFrom :Easy
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasGarnish ;
+                                     owl:someValuesFrom :OrangePeel
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasGlass ;
+                                     owl:someValuesFrom :HighballGlass
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasNonAlcoholic ;
+                                     owl:someValuesFrom :CranberryJuice
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasNonAlcoholic ;
+                                     owl:someValuesFrom :LimeJuice
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasNonAlcoholic ;
+                                     owl:someValuesFrom :SparklingWater
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasOtherIngredient ;
+                                     owl:someValuesFrom :Ice
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasStrength ;
+                                     owl:someValuesFrom :AlcoholFree
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTemp ;
+                                     owl:someValuesFrom :Cold
+                                   ] .
+
+
+###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#GinFizz
+:GinFizz rdf:type owl:Class ;
+         rdfs:subClassOf :NamedDrink ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasDifficulty ;
+                           owl:someValuesFrom :Hard
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasNonAlcoholic ;
+                           owl:someValuesFrom :OragneBlossomWater
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasNonAlcoholic ;
+                           owl:someValuesFrom :LemonJuice
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasNonAlcoholic ;
+                           owl:someValuesFrom :LimeJuice
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasNonAlcoholic ;
+                           owl:someValuesFrom :SparklingWater
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasOtherIngredient ;
+                           owl:someValuesFrom :EggWhite
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasOtherIngredient ;
+                           owl:someValuesFrom :GrindedSugar
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasOtherIngredient ;
+                           owl:someValuesFrom :HeavyCream
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasOtherIngredient ;
+                           owl:someValuesFrom :Ice
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasStrength ;
+                           owl:someValuesFrom :Heavy
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasTemp ;
+                           owl:someValuesFrom :Cold
+                         ] .
+
+
+###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#IrishCoffee
+:IrishCoffee rdf:type owl:Class ;
+             rdfs:subClassOf :NamedDrink ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasAlcohol ;
+                               owl:someValuesFrom :Whiskey
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasDifficulty ;
+                               owl:someValuesFrom :Easy
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasGarnish ;
+                               owl:someValuesFrom :WhippedCream
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasGlass ;
+                               owl:someValuesFrom :IrishCoffeeGlass
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasNonAlcoholic ;
+                               owl:someValuesFrom :Coffee
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasOtherIngredient ;
+                               owl:someValuesFrom :BrownSugar
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasStrength ;
+                               owl:someValuesFrom :Heavy
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasTemp ;
+                               owl:someValuesFrom :Hot
+                             ] .
+
+
+###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#LilletSpritz
+:LilletSpritz rdf:type owl:Class ;
+              rdfs:subClassOf :NamedDrink ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasAlcohol ;
+                                owl:someValuesFrom :LillietBlanc
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasDifficulty ;
+                                owl:someValuesFrom :Easy
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasGarnish ;
+                                owl:someValuesFrom :Strawberry
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasGlass ;
+                                owl:someValuesFrom :WineGlass
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasNonAlcoholic ;
+                                owl:someValuesFrom :TonicWater
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasOtherIngredient ;
+                                owl:someValuesFrom :Cucumber
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasOtherIngredient ;
+                                owl:someValuesFrom :MintLeaves
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasStrength ;
+                                owl:someValuesFrom :Medium
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasTemp ;
+                                owl:someValuesFrom :RoomTemp
+                              ] .
+
+
+###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#LimeQuarters
+:LimeQuarters rdf:type owl:Class ;
+              rdfs:subClassOf :Garnish .
+
+
+###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#LimeSlices
+:LimeSlices rdf:type owl:Class ;
+            rdfs:subClassOf :Garnish .
+
+
+###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#Mint
+:Mint rdf:type owl:Class ;
+      rdfs:subClassOf :Herb .
+
+
+###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#Mug
+:Mug rdf:type owl:Class ;
+     rdfs:subClassOf :Glass .
+
+
+###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#OragneBlossomWater
+:OragneBlossomWater rdf:type owl:Class ;
+                    rdfs:subClassOf :NonAlcoholic .
+
+
+###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#RussianCoffee
+:RussianCoffee rdf:type owl:Class ;
+               rdfs:subClassOf :NamedDrink ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasAlcohol ;
+                                 owl:someValuesFrom :Vodka
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasDifficulty ;
+                                 owl:someValuesFrom :Easy
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasGlass ;
+                                 owl:someValuesFrom :Mug
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasNonAlcoholic ;
+                                 owl:someValuesFrom :Coffee
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasStrength ;
+                                 owl:someValuesFrom :Heavy
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTemp ;
+                                 owl:someValuesFrom :Hot
+                               ] .
+
+
+###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#StrawberryLemonade
+:StrawberryLemonade rdf:type owl:Class ;
+                    rdfs:subClassOf :NamedDrink ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasDifficulty ;
+                                      owl:someValuesFrom :Intermediate
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasGarnish ;
+                                      owl:someValuesFrom :Strawberry
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasGlass ;
+                                      owl:someValuesFrom :CollinsGlass
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasNonAlcoholic ;
+                                      owl:someValuesFrom :Water
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasNonAlcoholic ;
+                                      owl:someValuesFrom :LemonJuice
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasOtherIngredient ;
+                                      owl:someValuesFrom :GrindedSugar
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasOtherIngredient ;
+                                      owl:someValuesFrom :Ice
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasOtherIngredient ;
+                                      owl:someValuesFrom :MintLeaves
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasStrength ;
+                                      owl:someValuesFrom :AlcoholFree
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasTemp ;
+                                      owl:someValuesFrom :Cold
+                                    ] .
+
+
+###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#TonicWater
+:TonicWater rdf:type owl:Class ;
+            rdfs:subClassOf :NonAlcoholic .
+
+
+###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#Water
+:Water rdf:type owl:Class ;
+       rdfs:subClassOf :NonAlcoholic .
+
+
+###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#WineGlass
+:WineGlass rdf:type owl:Class ;
+           rdfs:subClassOf :Glass .
+
+
+###  http://www.example.org/ontologies/cocktails#AgaveSyrup
 :AgaveSyrup rdf:type owl:Class ;
             rdfs:subClassOf :NonAlcoholic .
 
 
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#BlackberryLiqueur
+###  http://www.example.org/ontologies/cocktails#Alcohol
+:Alcohol rdf:type owl:Class ;
+         rdfs:subClassOf :Ingredient ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasState ;
+                           owl:someValuesFrom :Liquid
+                         ] .
+
+
+###  http://www.example.org/ontologies/cocktails#AlcoholFree
+:AlcoholFree rdf:type owl:Class ;
+             rdfs:subClassOf :Strength .
+
+
+###  http://www.example.org/ontologies/cocktails#Beer
+:Beer rdf:type owl:Class ;
+      rdfs:subClassOf :Alcohol .
+
+
+###  http://www.example.org/ontologies/cocktails#BlackCurrantJuice
+:BlackCurrantJuice rdf:type owl:Class ;
+                   rdfs:subClassOf :Juice .
+
+
+###  http://www.example.org/ontologies/cocktails#BlackberryLiqueur
 :BlackberryLiqueur rdf:type owl:Class ;
                    rdfs:subClassOf :Alcohol .
 
 
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#Bramble
+###  http://www.example.org/ontologies/cocktails#Bramble
 :Bramble rdf:type owl:Class ;
          rdfs:subClassOf :NamedDrink ,
                          [ rdf:type owl:Restriction ;
@@ -246,12 +658,22 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
                          ] .
 
 
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#Campari
+###  http://www.example.org/ontologies/cocktails#Campari
 :Campari rdf:type owl:Class ;
          rdfs:subClassOf :Alcohol .
 
 
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#CloverClub
+###  http://www.example.org/ontologies/cocktails#Chilly
+:Chilly rdf:type owl:Class ;
+        rdfs:subClassOf :ServingTemp .
+
+
+###  http://www.example.org/ontologies/cocktails#Cider
+:Cider rdf:type owl:Class ;
+       rdfs:subClassOf :Alcohol .
+
+
+###  http://www.example.org/ontologies/cocktails#CloverClub
 :CloverClub rdf:type owl:Class ;
             rdfs:subClassOf :NamedDrink ,
                             [ rdf:type owl:Restriction ;
@@ -280,453 +702,14 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
                             ] .
 
 
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#Cointreau
-:Cointreau rdf:type owl:Class ;
-           rdfs:subClassOf :Alcohol .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#Cucumber
-:Cucumber rdf:type owl:Class ;
-          rdfs:subClassOf :Other .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#DryVermouth
-:DryVermouth rdf:type owl:Class ;
-             rdfs:subClassOf :Vermouth .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#EggWhite
-:EggWhite rdf:type owl:Class ;
-          rdfs:subClassOf :Other .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#Fernet-Branca
-:Fernet-Branca rdf:type owl:Class ;
-               rdfs:subClassOf :Alcohol .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#Gibson
-:Gibson rdf:type owl:Class ;
-        rdfs:subClassOf :NamedDrink ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasAlcohol ;
-                          owl:someValuesFrom :DryVermouth
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasAlcohol ;
-                          owl:someValuesFrom :Gin
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasGarnish ;
-                          owl:someValuesFrom :PickledOnion
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasGlass ;
-                          owl:someValuesFrom :CoupeGlass
-                        ] .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#GrandMariner
-:GrandMariner rdf:type owl:Class ;
-              rdfs:subClassOf :Alcohol .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#GrapefruitSoda
-:GrapefruitSoda rdf:type owl:Class ;
-                rdfs:subClassOf :Soda .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#GrindedSugar
-:GrindedSugar rdf:type owl:Class ;
-              rdfs:subClassOf :Other .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#HankyPanky
-:HankyPanky rdf:type owl:Class ;
-            rdfs:subClassOf :NamedDrink ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :hasAlcohol ;
-                              owl:someValuesFrom :Fernet-Branca
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :hasAlcohol ;
-                              owl:someValuesFrom :SweetVermouth
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :hasAlcohol ;
-                              owl:someValuesFrom :Gin
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :hasGarnish ;
-                              owl:someValuesFrom :OrangeZest
-                            ] .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#HeavyCream
-:HeavyCream rdf:type owl:Class ;
-            rdfs:subClassOf :Other .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#Knickerbocker
-:Knickerbocker rdf:type owl:Class ;
-               rdfs:subClassOf :NamedDrink ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasAlcohol ;
-                                 owl:someValuesFrom :DryVermouth
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasAlcohol ;
-                                 owl:someValuesFrom :SweetVermouth
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasAlcohol ;
-                                 owl:someValuesFrom :Gin
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasGarnish ;
-                                 owl:someValuesFrom :LemonZest
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasGlass ;
-                                 owl:someValuesFrom :CocktailGlass
-                               ] .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#LaPaloma
-:LaPaloma rdf:type owl:Class ;
-          rdfs:subClassOf :NamedDrink ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasAlcohol ;
-                            owl:someValuesFrom :Tequila
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasGlass ;
-                            owl:someValuesFrom :CollinsGlass
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasNonAlcoholic ;
-                            owl:someValuesFrom :GrapefruitSoda
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasNonAlcoholic ;
-                            owl:someValuesFrom :LimeJuice
-                          ] .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#LillietBlanc
-:LillietBlanc rdf:type owl:Class ;
-              rdfs:subClassOf :Alcohol .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#MaiTai
-:MaiTai rdf:type owl:Class ;
-        rdfs:subClassOf :NamedDrink ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasAlcohol ;
-                          owl:someValuesFrom :GrandMariner
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasAlcohol ;
-                          owl:someValuesFrom :GoldenRum
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasGlass ;
-                          owl:someValuesFrom :TikiGlass
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasNonAlcoholic ;
-                          owl:someValuesFrom :OrgeatSyrup
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasNonAlcoholic ;
-                          owl:someValuesFrom :LimeJuice
-                        ] .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#Martini
-:Martini rdf:type owl:Class ;
-         rdfs:subClassOf :NamedDrink ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasAlcohol ;
-                           owl:someValuesFrom :DryVermouth
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasAlcohol ;
-                           owl:someValuesFrom :Gin
-                         ] .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#MartiniVenus
-:MartiniVenus rdf:type owl:Class ;
-              rdfs:subClassOf :NamedDrink ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasAlcohol ;
-                                owl:someValuesFrom :Cointreau
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasAlcohol ;
-                                owl:someValuesFrom :Gin
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasDifficulty ;
-                                owl:someValuesFrom :Easy
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasFruit ;
-                                owl:someValuesFrom :RaspberryPureed
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasGarnish ;
-                                owl:someValuesFrom :RaspberryHalf
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasGlass ;
-                                owl:someValuesFrom :CocktailGlass
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasNonAlcoholic ;
-                                owl:someValuesFrom :PeychaudsBitter
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasNonAlcoholic ;
-                                owl:someValuesFrom :SimpleSyrup
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasStrength ;
-                                owl:someValuesFrom :Medium
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasTemp ;
-                                owl:someValuesFrom :Cold
-                              ] .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#MartiniVesper
-:MartiniVesper rdf:type owl:Class ;
-               rdfs:subClassOf :NamedDrink ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasAlcohol ;
-                                 owl:someValuesFrom :LillietBlanc
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasAlcohol ;
-                                 owl:someValuesFrom :Gin
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasAlcohol ;
-                                 owl:someValuesFrom :Vodka
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasGarnish ;
-                                 owl:someValuesFrom :LemonZest
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasGlass ;
-                                 owl:someValuesFrom :CoupeGlass
-                               ] .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#MintLeaves
-:MintLeaves rdf:type owl:Class ;
-            rdfs:subClassOf :Other .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#Negroni
-:Negroni rdf:type owl:Class ;
-         rdfs:subClassOf :NamedDrink ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasAlcohol ;
-                           owl:someValuesFrom :Campari
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasAlcohol ;
-                           owl:someValuesFrom :SweetVermouth
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasAlcohol ;
-                           owl:someValuesFrom :Gin
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasDifficulty ;
-                           owl:someValuesFrom :Easy
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasGarnish ;
-                           owl:someValuesFrom :OrangeZest
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasGlass ;
-                           owl:someValuesFrom :TumblerGlass
-                         ] .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#OrangeFlowers
-:OrangeFlowers rdf:type owl:Class ;
-               rdfs:subClassOf :Other .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#OrgeatSyrup
-:OrgeatSyrup rdf:type owl:Class ;
-             rdfs:subClassOf :NonAlcoholic .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#PeychaudsBitter
-:PeychaudsBitter rdf:type owl:Class ;
-                 rdfs:subClassOf :NonAlcoholic .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#PickledOnion
-:PickledOnion rdf:type owl:Class ;
-              rdfs:subClassOf :Garnish .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#RamosGinFizz
-:RamosGinFizz rdf:type owl:Class ;
-              rdfs:subClassOf :NamedDrink ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasAlcohol ;
-                                owl:someValuesFrom :Gin
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasDifficulty ;
-                                owl:someValuesFrom :Intermediate
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasNonAlcoholic ;
-                                owl:someValuesFrom :SparklingWater
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasNonAlcoholic ;
-                                owl:someValuesFrom :LemonJuice
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasNonAlcoholic ;
-                                owl:someValuesFrom :LimeJuice
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasOtherIngredient ;
-                                owl:someValuesFrom :EggWhite
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasOtherIngredient ;
-                                owl:someValuesFrom :GrindedSugar
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasOtherIngredient ;
-                                owl:someValuesFrom :HeavyCream
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasOtherIngredient ;
-                                owl:someValuesFrom :OrangeFlowers
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasStrength ;
-                                owl:someValuesFrom :Medium
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasTemp ;
-                                owl:someValuesFrom :Cold
-                              ] .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#RaspberryHalf
-:RaspberryHalf rdf:type owl:Class ;
-               rdfs:subClassOf :Garnish .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#RaspberryMashed
-:RaspberryMashed rdf:type owl:Class ;
-                 rdfs:subClassOf :Fruit .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#RaspberryPureed
-:RaspberryPureed rdf:type owl:Class ;
-                 rdfs:subClassOf :Fruit .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#Soda
-:Soda rdf:type owl:Class ;
-      rdfs:subClassOf :NonAlcoholic .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#SparklingWater
-:SparklingWater rdf:type owl:Class ;
-                rdfs:subClassOf :NonAlcoholic .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#SweetVermouth
-:SweetVermouth rdf:type owl:Class ;
-               rdfs:subClassOf :Vermouth .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#Tequila
-:Tequila rdf:type owl:Class ;
-         rdfs:subClassOf :Alcohol .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#TommysMargherita
-:TommysMargherita rdf:type owl:Class ;
-                  rdfs:subClassOf :NamedDrink ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :hasAlcohol ;
-                                    owl:someValuesFrom :Tequila
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :hasGlass ;
-                                    owl:someValuesFrom :TumblerGlass
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :hasNonAlcoholic ;
-                                    owl:someValuesFrom :AgaveSyrup
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :hasNonAlcoholic ;
-                                    owl:someValuesFrom :LimeJuice
-                                  ] .
-
-
-###  http://semantic.cs.put.poznan.pl/ontologie/cocktails#Vermouth
-:Vermouth rdf:type owl:Class ;
-          rdfs:subClassOf :Alcohol .
-
-
-###  http://www.example.org/ontologies/cocktails#Alcohol
-:Alcohol rdf:type owl:Class ;
-         rdfs:subClassOf :Ingredient ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasState ;
-                           owl:someValuesFrom :Liquid
-                         ] .
-
-
-###  http://www.example.org/ontologies/cocktails#AlcoholFree
-:AlcoholFree rdf:type owl:Class ;
-             rdfs:subClassOf :Strength .
-
-
-###  http://www.example.org/ontologies/cocktails#Beer
-:Beer rdf:type owl:Class ;
-      rdfs:subClassOf :Alcohol .
-
-
-###  http://www.example.org/ontologies/cocktails#BlackCurrantJuice
-:BlackCurrantJuice rdf:type owl:Class ;
-                   rdfs:subClassOf :Juice .
-
-
-###  http://www.example.org/ontologies/cocktails#Chilly
-:Chilly rdf:type owl:Class ;
-        rdfs:subClassOf :ServingTemp .
-
-
-###  http://www.example.org/ontologies/cocktails#Cider
-:Cider rdf:type owl:Class ;
-       rdfs:subClassOf :Alcohol .
-
-
 ###  http://www.example.org/ontologies/cocktails#CocktailGlass
 :CocktailGlass rdf:type owl:Class ;
                rdfs:subClassOf :Glass .
+
+
+###  http://www.example.org/ontologies/cocktails#Cointreau
+:Cointreau rdf:type owl:Class ;
+           rdfs:subClassOf :Alcohol .
 
 
 ###  http://www.example.org/ontologies/cocktails#Cold
@@ -742,6 +725,11 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
 ###  http://www.example.org/ontologies/cocktails#CoupeGlass
 :CoupeGlass rdf:type owl:Class ;
             rdfs:subClassOf :Glass .
+
+
+###  http://www.example.org/ontologies/cocktails#Cucumber
+:Cucumber rdf:type owl:Class ;
+          rdfs:subClassOf :Other .
 
 
 ###  http://www.example.org/ontologies/cocktails#DarkBeer
@@ -777,6 +765,11 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
             rdfs:subClassOf :RedWine .
 
 
+###  http://www.example.org/ontologies/cocktails#DryVermouth
+:DryVermouth rdf:type owl:Class ;
+             rdfs:subClassOf :Vermouth .
+
+
 ###  http://www.example.org/ontologies/cocktails#DryWhiteWine
 :DryWhiteWine rdf:type owl:Class ;
               rdfs:subClassOf :WhiteWine .
@@ -785,6 +778,16 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
 ###  http://www.example.org/ontologies/cocktails#Easy
 :Easy rdf:type owl:Class ;
       rdfs:subClassOf :Difficulty .
+
+
+###  http://www.example.org/ontologies/cocktails#EggWhite
+:EggWhite rdf:type owl:Class ;
+          rdfs:subClassOf :Other .
+
+
+###  http://www.example.org/ontologies/cocktails#Fernet-Branca
+:Fernet-Branca rdf:type owl:Class ;
+               rdfs:subClassOf :Alcohol .
 
 
 ###  http://www.example.org/ontologies/cocktails#FluteGlass
@@ -810,6 +813,27 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
 ###  http://www.example.org/ontologies/cocktails#Gas
 :Gas rdf:type owl:Class ;
      rdfs:subClassOf :ThingState .
+
+
+###  http://www.example.org/ontologies/cocktails#Gibson
+:Gibson rdf:type owl:Class ;
+        rdfs:subClassOf :NamedDrink ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasAlcohol ;
+                          owl:someValuesFrom :DryVermouth
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasAlcohol ;
+                          owl:someValuesFrom :Gin
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasGarnish ;
+                          owl:someValuesFrom :PickledOnion
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasGlass ;
+                          owl:someValuesFrom :CoupeGlass
+                        ] .
 
 
 ###  http://www.example.org/ontologies/cocktails#Gimlet
@@ -880,6 +904,42 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
            rdfs:subClassOf :Rum .
 
 
+###  http://www.example.org/ontologies/cocktails#GrandMariner
+:GrandMariner rdf:type owl:Class ;
+              rdfs:subClassOf :Alcohol .
+
+
+###  http://www.example.org/ontologies/cocktails#GrapefruitSoda
+:GrapefruitSoda rdf:type owl:Class ;
+                rdfs:subClassOf :Soda .
+
+
+###  http://www.example.org/ontologies/cocktails#GrindedSugar
+:GrindedSugar rdf:type owl:Class ;
+              rdfs:subClassOf :Other .
+
+
+###  http://www.example.org/ontologies/cocktails#HankyPanky
+:HankyPanky rdf:type owl:Class ;
+            rdfs:subClassOf :NamedDrink ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasAlcohol ;
+                              owl:someValuesFrom :Fernet-Branca
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasAlcohol ;
+                              owl:someValuesFrom :Gin
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasAlcohol ;
+                              owl:someValuesFrom :SweetVermouth
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasGarnish ;
+                              owl:someValuesFrom :OrangeZest
+                            ] .
+
+
 ###  http://www.example.org/ontologies/cocktails#Hard
 :Hard rdf:type owl:Class ;
       rdfs:subClassOf :Difficulty .
@@ -888,6 +948,11 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
 ###  http://www.example.org/ontologies/cocktails#Heavy
 :Heavy rdf:type owl:Class ;
        rdfs:subClassOf :Strength .
+
+
+###  http://www.example.org/ontologies/cocktails#HeavyCream
+:HeavyCream rdf:type owl:Class ;
+            rdfs:subClassOf :Other .
 
 
 ###  http://www.example.org/ontologies/cocktails#Herb
@@ -1048,6 +1113,52 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
        rdfs:subClassOf :NonAlcoholic .
 
 
+###  http://www.example.org/ontologies/cocktails#Knickerbocker
+:Knickerbocker rdf:type owl:Class ;
+               rdfs:subClassOf :NamedDrink ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasAlcohol ;
+                                 owl:someValuesFrom :DryVermouth
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasAlcohol ;
+                                 owl:someValuesFrom :Gin
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasAlcohol ;
+                                 owl:someValuesFrom :SweetVermouth
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasGarnish ;
+                                 owl:someValuesFrom :LemonZest
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasGlass ;
+                                 owl:someValuesFrom :CocktailGlass
+                               ] .
+
+
+###  http://www.example.org/ontologies/cocktails#LaPaloma
+:LaPaloma rdf:type owl:Class ;
+          rdfs:subClassOf :NamedDrink ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasAlcohol ;
+                            owl:someValuesFrom :Tequila
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasGlass ;
+                            owl:someValuesFrom :CollinsGlass
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasNonAlcoholic ;
+                            owl:someValuesFrom :GrapefruitSoda
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasNonAlcoholic ;
+                            owl:someValuesFrom :LimeJuice
+                          ] .
+
+
 ###  http://www.example.org/ontologies/cocktails#LemonJuice
 :LemonJuice rdf:type owl:Class ;
             rdfs:subClassOf :Juice .
@@ -1066,6 +1177,11 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
 ###  http://www.example.org/ontologies/cocktails#LightBeer
 :LightBeer rdf:type owl:Class ;
            rdfs:subClassOf :Beer .
+
+
+###  http://www.example.org/ontologies/cocktails#LillietBlanc
+:LillietBlanc rdf:type owl:Class ;
+              rdfs:subClassOf :Alcohol .
 
 
 ###  http://www.example.org/ontologies/cocktails#LimeJuice
@@ -1088,9 +1204,117 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
         rdfs:subClassOf :ThingState .
 
 
+###  http://www.example.org/ontologies/cocktails#MaiTai
+:MaiTai rdf:type owl:Class ;
+        rdfs:subClassOf :NamedDrink ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasAlcohol ;
+                          owl:someValuesFrom :GoldenRum
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasAlcohol ;
+                          owl:someValuesFrom :GrandMariner
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasGlass ;
+                          owl:someValuesFrom :TikiGlass
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasNonAlcoholic ;
+                          owl:someValuesFrom :LimeJuice
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasNonAlcoholic ;
+                          owl:someValuesFrom :OrgeatSyrup
+                        ] .
+
+
 ###  http://www.example.org/ontologies/cocktails#MargaritaGlass
 :MargaritaGlass rdf:type owl:Class ;
                 rdfs:subClassOf :Glass .
+
+
+###  http://www.example.org/ontologies/cocktails#Martini
+:Martini rdf:type owl:Class ;
+         rdfs:subClassOf :NamedDrink ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasAlcohol ;
+                           owl:someValuesFrom :DryVermouth
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasAlcohol ;
+                           owl:someValuesFrom :Gin
+                         ] .
+
+
+###  http://www.example.org/ontologies/cocktails#MartiniVenus
+:MartiniVenus rdf:type owl:Class ;
+              rdfs:subClassOf :NamedDrink ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasAlcohol ;
+                                owl:someValuesFrom :Cointreau
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasAlcohol ;
+                                owl:someValuesFrom :Gin
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasDifficulty ;
+                                owl:someValuesFrom :Easy
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasFruit ;
+                                owl:someValuesFrom :RaspberryPureed
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasGarnish ;
+                                owl:someValuesFrom :RaspberryHalf
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasGlass ;
+                                owl:someValuesFrom :CocktailGlass
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasNonAlcoholic ;
+                                owl:someValuesFrom :PeychaudsBitter
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasNonAlcoholic ;
+                                owl:someValuesFrom :SimpleSyrup
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasStrength ;
+                                owl:someValuesFrom :Medium
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasTemp ;
+                                owl:someValuesFrom :Cold
+                              ] .
+
+
+###  http://www.example.org/ontologies/cocktails#MartiniVesper
+:MartiniVesper rdf:type owl:Class ;
+               rdfs:subClassOf :NamedDrink ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasAlcohol ;
+                                 owl:someValuesFrom :Gin
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasAlcohol ;
+                                 owl:someValuesFrom :LillietBlanc
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasAlcohol ;
+                                 owl:someValuesFrom :Vodka
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasGarnish ;
+                                 owl:someValuesFrom :LemonZest
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasGlass ;
+                                 owl:someValuesFrom :CoupeGlass
+                               ] .
 
 
 ###  http://www.example.org/ontologies/cocktails#Medium
@@ -1098,9 +1322,43 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
         rdfs:subClassOf :Strength .
 
 
+###  http://www.example.org/ontologies/cocktails#MintLeaves
+:MintLeaves rdf:type owl:Class ;
+            rdfs:subClassOf :Other .
+
+
 ###  http://www.example.org/ontologies/cocktails#NamedDrink
 :NamedDrink rdf:type owl:Class ;
             rdfs:subClassOf :Drink .
+
+
+###  http://www.example.org/ontologies/cocktails#Negroni
+:Negroni rdf:type owl:Class ;
+         rdfs:subClassOf :NamedDrink ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasAlcohol ;
+                           owl:someValuesFrom :Campari
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasAlcohol ;
+                           owl:someValuesFrom :Gin
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasAlcohol ;
+                           owl:someValuesFrom :SweetVermouth
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasDifficulty ;
+                           owl:someValuesFrom :Easy
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasGarnish ;
+                           owl:someValuesFrom :OrangeZest
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasGlass ;
+                           owl:someValuesFrom :TumblerGlass
+                         ] .
 
 
 ###  http://www.example.org/ontologies/cocktails#NonAlcoholic
@@ -1117,6 +1375,11 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
         rdfs:subClassOf :Garnish .
 
 
+###  http://www.example.org/ontologies/cocktails#OrangeFlowers
+:OrangeFlowers rdf:type owl:Class ;
+               rdfs:subClassOf :Other .
+
+
 ###  http://www.example.org/ontologies/cocktails#OrangePeel
 :OrangePeel rdf:type owl:Class ;
             rdfs:subClassOf :Garnish .
@@ -1125,6 +1388,11 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
 ###  http://www.example.org/ontologies/cocktails#OrangeZest
 :OrangeZest rdf:type owl:Class ;
             rdfs:subClassOf :Garnish .
+
+
+###  http://www.example.org/ontologies/cocktails#OrgeatSyrup
+:OrgeatSyrup rdf:type owl:Class ;
+             rdfs:subClassOf :NonAlcoholic .
 
 
 ###  http://www.example.org/ontologies/cocktails#OriginCountry
@@ -1142,9 +1410,83 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
                        ] .
 
 
+###  http://www.example.org/ontologies/cocktails#PeychaudsBitter
+:PeychaudsBitter rdf:type owl:Class ;
+                 rdfs:subClassOf :NonAlcoholic .
+
+
+###  http://www.example.org/ontologies/cocktails#PickledOnion
+:PickledOnion rdf:type owl:Class ;
+              rdfs:subClassOf :Garnish .
+
+
 ###  http://www.example.org/ontologies/cocktails#PineShootJuice
 :PineShootJuice rdf:type owl:Class ;
                 rdfs:subClassOf :Juice .
+
+
+###  http://www.example.org/ontologies/cocktails#RamosGinFizz
+:RamosGinFizz rdf:type owl:Class ;
+              rdfs:subClassOf :NamedDrink ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasAlcohol ;
+                                owl:someValuesFrom :Gin
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasDifficulty ;
+                                owl:someValuesFrom :Intermediate
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasNonAlcoholic ;
+                                owl:someValuesFrom :LemonJuice
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasNonAlcoholic ;
+                                owl:someValuesFrom :LimeJuice
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasNonAlcoholic ;
+                                owl:someValuesFrom :SparklingWater
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasOtherIngredient ;
+                                owl:someValuesFrom :EggWhite
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasOtherIngredient ;
+                                owl:someValuesFrom :GrindedSugar
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasOtherIngredient ;
+                                owl:someValuesFrom :HeavyCream
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasOtherIngredient ;
+                                owl:someValuesFrom :OrangeFlowers
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasStrength ;
+                                owl:someValuesFrom :Medium
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasTemp ;
+                                owl:someValuesFrom :Cold
+                              ] .
+
+
+###  http://www.example.org/ontologies/cocktails#RaspberryHalf
+:RaspberryHalf rdf:type owl:Class ;
+               rdfs:subClassOf :Garnish .
+
+
+###  http://www.example.org/ontologies/cocktails#RaspberryMashed
+:RaspberryMashed rdf:type owl:Class ;
+                 rdfs:subClassOf :Fruit .
+
+
+###  http://www.example.org/ontologies/cocktails#RaspberryPureed
+:RaspberryPureed rdf:type owl:Class ;
+                 rdfs:subClassOf :Fruit .
 
 
 ###  http://www.example.org/ontologies/cocktails#RedWine
@@ -1192,9 +1534,19 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
              rdfs:subClassOf :NonAlcoholic .
 
 
+###  http://www.example.org/ontologies/cocktails#Soda
+:Soda rdf:type owl:Class ;
+      rdfs:subClassOf :NonAlcoholic .
+
+
 ###  http://www.example.org/ontologies/cocktails#Solid
 :Solid rdf:type owl:Class ;
        rdfs:subClassOf :ThingState .
+
+
+###  http://www.example.org/ontologies/cocktails#SparklingWater
+:SparklingWater rdf:type owl:Class ;
+                rdfs:subClassOf :NonAlcoholic .
 
 
 ###  http://www.example.org/ontologies/cocktails#Strawberry
@@ -1212,9 +1564,19 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
               rdfs:subClassOf :RedWine .
 
 
+###  http://www.example.org/ontologies/cocktails#SweetVermouth
+:SweetVermouth rdf:type owl:Class ;
+               rdfs:subClassOf :Vermouth .
+
+
 ###  http://www.example.org/ontologies/cocktails#SweetWhiteWine
 :SweetWhiteWine rdf:type owl:Class ;
                 rdfs:subClassOf :WhiteWine .
+
+
+###  http://www.example.org/ontologies/cocktails#Tequila
+:Tequila rdf:type owl:Class ;
+         rdfs:subClassOf :Alcohol .
 
 
 ###  http://www.example.org/ontologies/cocktails#Theme
@@ -1231,6 +1593,27 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
            rdfs:subClassOf :Glass .
 
 
+###  http://www.example.org/ontologies/cocktails#TommysMargherita
+:TommysMargherita rdf:type owl:Class ;
+                  rdfs:subClassOf :NamedDrink ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasAlcohol ;
+                                    owl:someValuesFrom :Tequila
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasGlass ;
+                                    owl:someValuesFrom :TumblerGlass
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasNonAlcoholic ;
+                                    owl:someValuesFrom :AgaveSyrup
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasNonAlcoholic ;
+                                    owl:someValuesFrom :LimeJuice
+                                  ] .
+
+
 ###  http://www.example.org/ontologies/cocktails#TumblerGlass
 :TumblerGlass rdf:type owl:Class ;
               rdfs:subClassOf :Glass ;
@@ -1245,6 +1628,11 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
 
 ###  http://www.example.org/ontologies/cocktails#ValuePartition
 :ValuePartition rdf:type owl:Class .
+
+
+###  http://www.example.org/ontologies/cocktails#Vermouth
+:Vermouth rdf:type owl:Class ;
+          rdfs:subClassOf :Alcohol .
 
 
 ###  http://www.example.org/ontologies/cocktails#Vodka
@@ -1307,6 +1695,29 @@ owl:topObjectProperty rdfs:domain :Ingredient ;
 #################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :IrishCoffee
+                :Bramble
+                :CloverClub
+                :Gibson
+                :Gimlet
+                :HankyPanky
+                :JaegerBeerShot
+                :JaegerCiderDrink
+                :JeagerWineDrink
+                :Knickerbocker
+                :LaPaloma
+                :MaiTai
+                :Martini
+                :MartiniVenus
+                :MartiniVesper
+                :Negroni
+                :RamosGinFizz
+                :TommysMargherita
+              )
+] .
+
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :Alcohol
