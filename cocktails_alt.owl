@@ -1,0 +1,1589 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#"
+     xml:base="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#canBeReplacedWith -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#canBeReplacedWith">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#canReplace"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#canReplace -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#canReplace">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasAlcohol -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasAlcohol">
+        <rdfs:subPropertyOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasIngredient"/>
+        <owl:inverseOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isAlcoholFor"/>
+        <rdfs:domain rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <rdfs:range rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasCountryOfOrigin -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasCountryOfOrigin">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasDifficulty -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasDifficulty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasFruit -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasFruit">
+        <rdfs:subPropertyOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasIngredient"/>
+        <owl:inverseOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isFruitFor"/>
+        <rdfs:domain rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <rdfs:range rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Fruit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasGarnish -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasGarnish">
+        <rdfs:subPropertyOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasIngredient"/>
+        <owl:inverseOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isGarnishFor"/>
+        <rdfs:domain rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <rdfs:range rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Garnish"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasGlass -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasGlass">
+        <rdfs:subPropertyOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasIngredient"/>
+        <owl:inverseOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isGlassFor"/>
+        <rdfs:domain rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <rdfs:range rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Glass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasHerb -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasHerb">
+        <rdfs:subPropertyOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasIngredient"/>
+        <owl:inverseOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isHerbFor"/>
+        <rdfs:domain rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <rdfs:range rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Herb"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasIngredient">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isIngredientOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasNonAlcoholic -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasNonAlcoholic">
+        <rdfs:subPropertyOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasIngredient"/>
+        <owl:inverseOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isNonAlcoholicFor"/>
+        <rdfs:domain rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <rdfs:range rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NonAlcoholic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasOtherIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasOtherIngredient">
+        <rdfs:subPropertyOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasIngredient"/>
+        <owl:inverseOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isOtherIngredientFor"/>
+        <rdfs:domain rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <rdfs:range rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Other"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasState -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasState">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasStrength -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasStrength">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasTemp -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasTemp">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasTheme -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#hasTheme">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isAlcoholFor -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isAlcoholFor">
+        <rdfs:subPropertyOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isIngredientOf"/>
+        <rdfs:domain rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+        <rdfs:range rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isFruitFor -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isFruitFor">
+        <rdfs:subPropertyOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isIngredientOf"/>
+        <rdfs:domain rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Fruit"/>
+        <rdfs:range rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isGarnishFor -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isGarnishFor">
+        <rdfs:subPropertyOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isIngredientOf"/>
+        <rdfs:domain rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Garnish"/>
+        <rdfs:range rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isGlassFor -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isGlassFor">
+        <rdfs:subPropertyOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isIngredientOf"/>
+        <rdfs:domain rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Glass"/>
+        <rdfs:range rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isHerbFor -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isHerbFor">
+        <rdfs:subPropertyOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isIngredientOf"/>
+        <rdfs:domain rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Herb"/>
+        <rdfs:range rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isIngredientOf -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isIngredientOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isNonAlcoholicFor -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isNonAlcoholicFor">
+        <rdfs:subPropertyOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isIngredientOf"/>
+        <rdfs:domain rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NonAlcoholic"/>
+        <rdfs:range rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isOtherIngredientFor -->
+
+    <owl:ObjectProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isOtherIngredientFor">
+        <rdfs:subPropertyOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#isIngredientOf"/>
+        <rdfs:domain rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Other"/>
+        <rdfs:range rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ingredientsProportion -->
+
+    <owl:DatatypeProperty rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ingredientsProportion"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol -->
+
+    <owl:Class rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol">
+        <rdfs:subClassOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Difficulty -->
+
+    <owl:Class rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Difficulty">
+        <rdfs:subClassOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Drink -->
+
+    <owl:Class rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Drink">
+        <rdfs:subClassOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DrinkThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DrinkThing -->
+
+    <owl:Class rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DrinkThing"/>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Fruit -->
+
+    <owl:Class rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Fruit">
+        <rdfs:subClassOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Garnish -->
+
+    <owl:Class rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Garnish">
+        <rdfs:subClassOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Glass -->
+
+    <owl:Class rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Glass">
+        <rdfs:subClassOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Herb -->
+
+    <owl:Class rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Herb">
+        <rdfs:subClassOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Ingredient -->
+
+    <owl:Class rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Ingredient">
+        <rdfs:subClassOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DrinkThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink -->
+
+    <owl:Class rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink">
+        <rdfs:subClassOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Drink"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NonAlcoholic -->
+
+    <owl:Class rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NonAlcoholic">
+        <rdfs:subClassOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OriginCountry -->
+
+    <owl:Class rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OriginCountry">
+        <rdfs:subClassOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DrinkThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Other -->
+
+    <owl:Class rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Other">
+        <rdfs:subClassOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ServingTemp -->
+
+    <owl:Class rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ServingTemp">
+        <rdfs:subClassOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Strength -->
+
+    <owl:Class rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Strength">
+        <rdfs:subClassOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Theme -->
+
+    <owl:Class rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Theme">
+        <rdfs:subClassOf rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DrinkThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ThingState -->
+
+    <owl:Class rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ThingState"/>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ValuePartition -->
+
+    <owl:Class rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ValuePartition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#AgaveSyrup -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#AgaveSyrup">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NonAlcoholic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#AlcoholFree -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#AlcoholFree">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Strength"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Basil -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Basil">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Herb"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#BlackCurrantJuice -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#BlackCurrantJuice">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NonAlcoholic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#BlackberryLiqeur -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#BlackberryLiqeur">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Bramble -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Bramble">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#BlackberryLiqeur"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Gin"/>
+        <hasDifficulty rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Easy"/>
+        <hasGlass rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#TumblerGlass"/>
+        <hasNonAlcoholic rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LimeJuice"/>
+        <hasNonAlcoholic rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SimpleSyrup"/>
+        <hasState rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Liquid"/>
+        <hasStrength rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium"/>
+        <hasTemp rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cold"/>
+        <ingredientsProportion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40ml Gin, 20ml BlackberryLiqeur, 20ml LimeJuice, 10ml SimpleSyrup</ingredientsProportion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Campari -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Campari">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Chilly -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Chilly">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ServingTemp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cider -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cider">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#CloverClub -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#CloverClub">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DryVermouth"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Gin"/>
+        <hasDifficulty rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium"/>
+        <hasFruit rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#RaspberryMashed"/>
+        <hasGarnish rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#RaspberryHalved"/>
+        <hasGlass rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#CoupeGlass"/>
+        <hasNonAlcoholic rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LemonJuice"/>
+        <hasOtherIngredient rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#EggWhite"/>
+        <hasStrength rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium"/>
+        <hasTemp rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cold"/>
+        <ingredientsProportion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 EggWhite, 20ml LemonJuice, 60ml Gin, 20ml DryVermouth</ingredientsProportion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#CocktailGlass -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#CocktailGlass">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Glass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cointreau -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cointreau">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cold -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cold">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ServingTemp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#CollinsGlass -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#CollinsGlass">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Glass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#CoupeGlass -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#CoupeGlass">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Glass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cucumber -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cucumber">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Other"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DarkBeer -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DarkBeer">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DarkRum -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DarkRum">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DirtyMartini -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DirtyMartini">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DryVermouth"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Gin"/>
+        <hasDifficulty rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Easy"/>
+        <hasGlass rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#MartiniGlass"/>
+        <hasOtherIngredient rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OliveBrine"/>
+        <hasStrength rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium"/>
+        <hasTemp rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cold"/>
+        <ingredientsProportion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60ml Gin, 10ml DryVermouth, 20ml OliveBrine</ingredientsProportion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DryRedWine -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DryRedWine">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DryVermouth -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DryVermouth">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DryWhiteWine -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DryWhiteWine">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Easy -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Easy">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Difficulty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#EggWhite -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#EggWhite">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Other"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#England -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#England">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OriginCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#FernetBranca -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#FernetBranca">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#FluteGlass -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#FluteGlass">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Glass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Gas -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Gas">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ThingState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Gibson -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Gibson">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DryVermouth"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Gin"/>
+        <hasDifficulty rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Easy"/>
+        <hasGarnish rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#PickledOnion"/>
+        <hasGlass rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#CoupeGlass"/>
+        <hasStrength rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium"/>
+        <ingredientsProportion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60ml Gin, 10ml DryVermouth</ingredientsProportion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Gimlet -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Gimlet">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#WhiteRum"/>
+        <hasCountryOfOrigin rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#England"/>
+        <hasDifficulty rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Easy"/>
+        <hasGarnish rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LemonZest"/>
+        <hasGlass rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#CocktailGlass"/>
+        <hasNonAlcoholic rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LimeJuice"/>
+        <hasOtherIngredient rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SimpleSyrup"/>
+        <hasStrength rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium"/>
+        <hasTemp rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cold"/>
+        <hasTheme rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Sailor"/>
+        <ingredientsProportion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60ml Gin, 10ml LimeJuice, 10ml SimpleSyroup</ingredientsProportion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Gin -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Gin">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#GingerBeer -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#GingerBeer">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#GoldenRum -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#GoldenRum">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#GrandMariner -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#GrandMariner">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#GrapefruitSoda -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#GrapefruitSoda">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NonAlcoholic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#GrindedSugar -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#GrindedSugar">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Other"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#HankyPanky -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#HankyPanky">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#FernetBranca"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Gin"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SweetVermouth"/>
+        <hasDifficulty rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Easy"/>
+        <hasGarnish rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OrangePeel"/>
+        <hasGlass rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#CocktailGlass"/>
+        <hasStrength rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium"/>
+        <hasTemp rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cold"/>
+        <ingredientsProportion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3dash FernetBranca, 40ml Gin, 40ml SweetVermouth</ingredientsProportion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Hard -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Hard">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Difficulty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Heavy -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Heavy">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Strength"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#HeavyCream -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#HeavyCream">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Other"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#HibiscusElDiablo -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#HibiscusElDiablo">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#GingerBeer"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Tequila"/>
+        <hasDifficulty rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Easy"/>
+        <hasGarnish rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LimePeel"/>
+        <hasGlass rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#HighballGlass"/>
+        <hasNonAlcoholic rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#HibiscusSyrup"/>
+        <hasNonAlcoholic rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LimeJuice"/>
+        <hasOtherIngredient rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Ice"/>
+        <hasStrength rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium"/>
+        <hasTemp rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cold"/>
+        <ingredientsProportion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60ml Tequila, 15ml LimeJuice, 15ml HibiscusSyrup, top with GingerBeer</ingredientsProportion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#HibiscusSyrup -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#HibiscusSyrup">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NonAlcoholic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#HighballGlass -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#HighballGlass">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Glass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Hot -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Hot">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ServingTemp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#HurricaneGlass -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#HurricaneGlass">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Glass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Ice -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Ice">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Other"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Intermediate -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Intermediate">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Difficulty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#IrishCoffeeGlass -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#IrishCoffeeGlass">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Glass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#JaegerBeerShot -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#JaegerBeerShot">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Jaegermeister"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LightBeer"/>
+        <hasDifficulty rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Easy"/>
+        <hasGlass rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ShotGlass"/>
+        <hasStrength rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium"/>
+        <hasTemp rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cold"/>
+        <ingredientsProportion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80ml Jaegermeister, 40ml LightBeer</ingredientsProportion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#JaegerCiderDrink -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#JaegerCiderDrink">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cider"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Jaegermeister"/>
+        <hasDifficulty rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Easy"/>
+        <hasGarnish rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LemonPeel"/>
+        <hasNonAlcoholic rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LemonJuice"/>
+        <hasNonAlcoholic rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#PineShootJuice"/>
+        <hasOtherIngredient rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Ice"/>
+        <hasStrength rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium"/>
+        <hasTemp rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cold"/>
+        <ingredientsProportion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40ml Jaegermeister, 20ml LemonJuice, 10ml PineShootSyrup, top with Cider</ingredientsProportion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#JaegerWineDrink -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#JaegerWineDrink">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Jaegermeister"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#RedWine"/>
+        <hasDifficulty rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Easy"/>
+        <hasGarnish rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OrangePeel"/>
+        <hasGlass rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#TumblerGlass"/>
+        <hasNonAlcoholic rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#BlackCurrantJuice"/>
+        <hasOtherIngredient rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Ice"/>
+        <hasStrength rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium"/>
+        <hasTemp rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cold"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#JaegerWineDrink"/>
+        <owl:assertionProperty rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ingredientsProportion"/>
+        <owl:targetValue>40ml Jaegermeister, 40ml RedWine, 40ml CranberryJuice</owl:targetValue>
+    </rdf:Description>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Jaegermeister -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Jaegermeister">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Knickerbocker -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Knickerbocker">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DryVermouth"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Gin"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SweetVermouth"/>
+        <hasDifficulty rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Easy"/>
+        <hasGarnish rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LemonPeel"/>
+        <hasGlass rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#CocktailGlass"/>
+        <hasStrength rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium"/>
+        <hasTemp rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cold"/>
+        <ingredientsProportion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60ml Gin, 10ml DryVermouth, 10ml SweetVermouth</ingredientsProportion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LaPaloma -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LaPaloma">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Tequila"/>
+        <hasDifficulty rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Easy"/>
+        <hasGlass rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#CollinsGlass"/>
+        <hasNonAlcoholic rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#GrapefruitSoda"/>
+        <hasNonAlcoholic rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LimeJuice"/>
+        <hasStrength rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium"/>
+        <hasTemp rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cold"/>
+        <hasTheme rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Mexican"/>
+        <ingredientsProportion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60ml Tequila, 15ml limeJuice, top with GrapefruitSoda</ingredientsProportion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LemonJuice -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LemonJuice">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NonAlcoholic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LemonPeel -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LemonPeel">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Garnish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LemonZest -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LemonZest">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Garnish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Light -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Light">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Strength"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LightBeer -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LightBeer">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LilletBlanc -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LilletBlanc">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LimeJuice -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LimeJuice">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NonAlcoholic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LimePeel -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LimePeel">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Garnish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LimeZest -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LimeZest">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Garnish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Liquid -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Liquid">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ThingState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#MaiTai -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#MaiTai">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#GoldenRum"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#GrandMariner"/>
+        <hasGarnish rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LimePeel"/>
+        <hasGarnish rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Mint"/>
+        <hasGlass rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#TikiGlass"/>
+        <hasNonAlcoholic rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LimeJuice"/>
+        <hasNonAlcoholic rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OrgeatSyrup"/>
+        <hasOtherIngredient rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Ice"/>
+        <hasStrength rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium"/>
+        <hasTemp rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cold"/>
+        <hasTheme rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Tiki"/>
+        <ingredientsProportion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40ml GoldenRum, 10ml GrandMariner, 20ml LimeJuice, 10ml OrgeatSyrup</ingredientsProportion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#MargaritaGlass -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#MargaritaGlass">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Glass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Martini -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Martini">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DryVermouth"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Gin"/>
+        <hasDifficulty rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Easy"/>
+        <hasGlass rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#MartiniGlass"/>
+        <hasStrength rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium"/>
+        <hasTemp rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cold"/>
+        <ingredientsProportion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60ml Gin, 10ml DryVermouth</ingredientsProportion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#MartiniGlass -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#MartiniGlass">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Glass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#MartiniVenus -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#MartiniVenus">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cointreau"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Gin"/>
+        <hasDifficulty rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Easy"/>
+        <hasFruit rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#RaspberryMashed"/>
+        <hasGlass rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#CocktailGlass"/>
+        <hasNonAlcoholic rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SimpleSyrup"/>
+        <hasOtherIngredient rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#PeychaudsBitter"/>
+        <hasStrength rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium"/>
+        <hasTemp rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cold"/>
+        <ingredientsProportion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40ml Gin, 20ml Cointreau, 10ml SimpleSyrup, 2dashes PeychaudsBitter</ingredientsProportion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#MartiniVesper -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#MartiniVesper">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Gin"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LilletBlanc"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Vodka"/>
+        <hasDifficulty rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Easy"/>
+        <hasGarnish rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LemonPeel"/>
+        <hasGlass rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#MartiniGlass"/>
+        <hasStrength rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium"/>
+        <hasTemp rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cold"/>
+        <ingredientsProportion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20ml Vodka, 60ml Gin, 10ml LilletBlanc</ingredientsProportion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Strength"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Mexican -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Mexican">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Theme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Mint -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Mint">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Herb"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Negroni -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Negroni">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Campari"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Gin"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SweetVermouth"/>
+        <hasDifficulty rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Easy"/>
+        <hasGarnish rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OrangePeel"/>
+        <hasGlass rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#TumblerGlass"/>
+        <hasOtherIngredient rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Ice"/>
+        <hasStrength rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium"/>
+        <hasTemp rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cold"/>
+        <ingredientsProportion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30ml Gin, 30ml SweetVermouth, 30ml Campari</ingredientsProportion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OldFashionedGlass -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OldFashionedGlass">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Glass"/>
+        <owl:sameAs rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#RocksGlass"/>
+        <owl:sameAs rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#TumblerGlass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OliveBrine -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OliveBrine">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Other"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Olives -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Olives">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Garnish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OrangeFlowers -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OrangeFlowers">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Other"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OrangeJuice -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OrangeJuice">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NonAlcoholic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OrangePeel -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OrangePeel">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Garnish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OrangeZest -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OrangeZest">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Garnish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OrgeatSyrup -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OrgeatSyrup">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NonAlcoholic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#PeychaudsBitter -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#PeychaudsBitter">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NonAlcoholic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#PickledOnion -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#PickledOnion">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Garnish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#PineShootJuice -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#PineShootJuice">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NonAlcoholic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#RamosGinFizz -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#RamosGinFizz">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Gin"/>
+        <hasDifficulty rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Intermediate"/>
+        <hasGlass rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#CollinsGlass"/>
+        <hasNonAlcoholic rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LemonJuice"/>
+        <hasNonAlcoholic rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LimeJuice"/>
+        <hasNonAlcoholic rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SparklingWater"/>
+        <hasOtherIngredient rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#EggWhite"/>
+        <hasOtherIngredient rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#HeavyCream"/>
+        <hasOtherIngredient rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#OrangeFlowers"/>
+        <hasStrength rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Medium"/>
+        <hasTemp rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cold"/>
+        <ingredientsProportion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60ml Gin, 15ml LemonJuice, 15ml LimeJuice, 1 EggWhite, 30ml HeavyCream, 2tsp MashedSugar, 0.5tsp OrangeFlowers, top with SparklingWater</ingredientsProportion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#RaspberryHalved -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#RaspberryHalved">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Garnish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#RaspberryMashed -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#RaspberryMashed">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Fruit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#RedWine -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#RedWine">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#RocksGlass -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#RocksGlass">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Glass"/>
+        <owl:sameAs rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#TumblerGlass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#RoomTemp -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#RoomTemp">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ServingTemp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#RootBeer -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#RootBeer">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Rum -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Rum">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Sailor -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Sailor">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Theme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SaltyRim -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SaltyRim">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Garnish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SemiDryRedWine -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SemiDryRedWine">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SemiDryWhiteWine -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SemiDryWhiteWine">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ShotGlass -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ShotGlass">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Glass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SimpleSyrup -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SimpleSyrup">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NonAlcoholic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Solid -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Solid">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ThingState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SparklingWater -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SparklingWater">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NonAlcoholic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Strawberry -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Strawberry">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Garnish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SweetRedWine -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SweetRedWine">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SweetVermouth -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SweetVermouth">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SweetWhiteWine -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#SweetWhiteWine">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Tequila -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Tequila">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Tiki -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Tiki">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Theme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#TikiGlass -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#TikiGlass">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Glass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#TommysMargherita -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#TommysMargherita">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#NamedDrink"/>
+        <hasAlcohol rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Tequila"/>
+        <hasDifficulty rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Easy"/>
+        <hasGlass rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#TumblerGlass"/>
+        <hasNonAlcoholic rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#AgaveSyrup"/>
+        <hasNonAlcoholic rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#LimeJuice"/>
+        <hasTemp rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Cold"/>
+        <hasTheme rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Mexican"/>
+        <ingredientsProportion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60ml Tequila, 15ml AgaveSyrup, 30ml LimeJuice</ingredientsProportion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#TumblerGlass -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#TumblerGlass">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Glass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Umbrella -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Umbrella">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Garnish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Vermouth -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Vermouth">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Vodka -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Vodka">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#WhippedCream -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#WhippedCream">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Garnish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#WhiteRum -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#WhiteRum">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#WhiteWine -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#WhiteWine">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Wine -->
+
+    <owl:NamedIndividual rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Wine">
+        <rdf:type rdf:resource="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Alcohol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Difficulty"/>
+            <rdf:Description rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ServingTemp"/>
+            <rdf:Description rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#Strength"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#DrinkThing"/>
+            <rdf:Description rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ThingState"/>
+            <rdf:Description rdf:about="http://semantic.cs.put.poznan.pl/ontologie/cocktails.owl#ValuePartition"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
